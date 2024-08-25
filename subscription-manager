@@ -1,0 +1,9 @@
+error : This system is registered with an entitlement server, but is not receiving updates. You can use subscription-manager to assign subscriptions
+Fix:
+subscription-manager remove --all
+subscription-manager unregister
+subscription-manager clean
+yum clean all
+rm -rf /var/cache/yum/*
+subscription-manager register
+subscription-manager attach --auto
